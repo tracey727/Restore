@@ -1,9 +1,20 @@
 {
-  "name": "GENEVIEVE Restore",
+  "name": "GENEVIEVE App Restore",
   "short_name": "Restore",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#f7f2e8",
-  "theme_color": "#182033",
-  "description": "A private daily care companion for rest, nourishment, connection and recovery."
+  "background_color": "#131d3d",
+  "theme_color": "#131d3d",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
