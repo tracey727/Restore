@@ -60,6 +60,61 @@ nav button{border:0;background:transparent;color:#c9c7d7;padding:7px 2px;font-si
 nav button span{display:block;font-size:22px;margin-bottom:2px}nav button.active{color:var(--gold2)}
 .small{font-size:12px;color:var(--muted)}
 @media(max-width:420px){.app{padding-left:12px;padding-right:12px}.grid{gap:8px}.tile{min-height:108px}.tile b{font-size:11px}.chant p{font-size:17px}}
+
+/* Weekend readability pass */
+.tile:nth-child(1), .tile:nth-child(2), .tile:nth-child(4), .tile:nth-child(5), .tile:nth-child(7), .tile:nth-child(8){
+  color:#fffaf2 !important;
+}
+.tile:nth-child(1) b,.tile:nth-child(1) .count,
+.tile:nth-child(2) b,.tile:nth-child(2) .count,
+.tile:nth-child(4) b,.tile:nth-child(4) .count,
+.tile:nth-child(5) b,.tile:nth-child(5) .count,
+.tile:nth-child(7) b,.tile:nth-child(7) .count,
+.tile:nth-child(8) b,.tile:nth-child(8) .count{
+  color:#fffaf2 !important;
+  text-shadow:0 1px 2px rgba(0,0,0,.35);
+}
+.tile:nth-child(3) b,.tile:nth-child(3) .count,
+.tile:nth-child(6) b,.tile:nth-child(6) .count,
+.tile:nth-child(9) b,.tile:nth-child(9) .count{
+  color:#172044 !important;
+}
+.chant p{font-size:20px;line-height:1.6}
+.greeting h2{font-size:27px}
+.section-title{font-size:27px}
+.card{font-size:16px}
+nav button{font-size:12px}
+@media(max-width:420px){
+  .tile{min-height:116px;padding:12px 8px}
+  .tile b{font-size:13px}
+  .count{font-size:11.5px}
+  .chant p{font-size:18px}
+}
+
+
+/* FINAL ACCESSIBILITY FIX — lavender tiles */
+.tile:nth-child(2),
+.tile:nth-child(4),
+.tile:nth-child(8){
+  color:#101936 !important;
+  background:linear-gradient(145deg,#d9d3f0,#b9b0dc) !important;
+}
+.tile:nth-child(2) b,.tile:nth-child(2) .count,
+.tile:nth-child(4) b,.tile:nth-child(4) .count,
+.tile:nth-child(8) b,.tile:nth-child(8) .count{
+  color:#101936 !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+.tile:nth-child(2) b,.tile:nth-child(4) b,.tile:nth-child(8) b{
+  font-size:15px !important;
+  font-weight:900 !important;
+}
+.tile:nth-child(2) .count,.tile:nth-child(4) .count,.tile:nth-child(8) .count{
+  font-size:13px !important;
+  font-weight:800 !important;
+}
+
 </style>
 </head>
 <body>
@@ -170,7 +225,7 @@ nav button span{display:block;font-size:22px;margin-bottom:2px}nav button.active
 </div></nav>
 
 <script>
-const KEY='genevieve-app-restore-v2';
+const KEY='genevieve-app-restore-final-v4';
 let data=JSON.parse(localStorage.getItem(KEY)||'{}');
 const counts=data.counts||{};
 function persist(){data.counts=counts;localStorage.setItem(KEY,JSON.stringify(data));updateProgress()}
