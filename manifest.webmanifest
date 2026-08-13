@@ -1,0 +1,9 @@
+{
+  "name": "GENEVIEVE Restore",
+  "short_name": "Restore",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f2e8",
+  "theme_color": "#182033",
+  "description": "A private daily care companion for rest, nourishment, connection and recovery."
+}
