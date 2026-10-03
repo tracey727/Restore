@@ -1,0 +1,17 @@
+name: Restore CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -s index.html
+      - run: test -s manifest.webmanifest
+      - run: test -s service-worker.js
+      - run: test -s icon-192.png
+      - run: test -s icon-512.png
